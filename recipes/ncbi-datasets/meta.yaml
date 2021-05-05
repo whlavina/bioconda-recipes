@@ -10,10 +10,11 @@ source:
 
 build:
   number: 0
+  noarch: generic
 
-requirements:
-  build:
-    - {{ compiler('go') }}
+#requirements:
+#  build:
+#    - {{ compiler('go') }}
 
 test:
   commands:
@@ -23,3 +24,7 @@ about:
   home: https://www.ncbi.nlm.nih.gov/datasets/
   license: Public Domain
   summary: NCBI command-line tool to query and download biological sequence data across all domains of life.
+
+extra:
+  skip-lints:
+    - should_not_be_noarch_source
