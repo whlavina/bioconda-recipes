@@ -1,0 +1,23 @@
+package:
+  name: ncbi-datasets
+  version: "11.16.4"
+
+source:
+  - url: https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/mac/datasets # [osx]
+    sha256: d756249a8dea2ac59560daa167871ce9eccef1a8b68bdfba210ba7611d12b8e4 # [osx]
+  - url: https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets # [linux]
+    sha256: 91647d5a835a5d3d41c7b48b37e9010775adde8b422f87f4366013fddfd7588c # [linux]
+
+build:
+  number: 0
+  noarch: generic
+
+test:
+  commands:
+    - datasets version
+
+about:
+  home: https://www.ncbi.nlm.nih.gov/datasets/
+  license: Public Domain
+  summary: NCBI datasets is a command-line tool that is used to query and download biological sequence data
+across all domains of life from NCBI databases.
